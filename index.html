@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Curated visuals</p>
+      <h1>Image Gallery</h1>
+      <p>Explore a modern gallery of photographs, illustrations, and textures with smooth filtering and responsive cards.</p>
+    </div>
+  </header>
+
+  <main class="gallery-page">
+    <section class="filter-bar">
+      <button class="filter-button active" data-category="all">All</button>
+      <button class="filter-button" data-category="landscape">Landscape</button>
+      <button class="filter-button" data-category="architecture">Architecture</button>
+      <button class="filter-button" data-category="food">Food</button>
+      <button class="filter-button" data-category="portrait">Portrait</button>
+    </section>
+
+    <section class="upload-panel">
+      <div class="upload-card">
+        <h2>Upload your own image</h2>
+        <p>Choose a file, add a category, and your image will be added to the gallery for your browser session.</p>
+        <form id="upload-form">
+          <label class="file-label">
+            Select image
+            <input type="file" id="image-file" accept="image/*" required>
+          </label>
+          <label>
+            Category
+            <select id="image-category">
+              <option value="landscape">Landscape</option>
+              <option value="architecture">Architecture</option>
+              <option value="food">Food</option>
+              <option value="portrait">Portrait</option>
+            </select>
+          </label>
+          <label>
+            Title
+            <input type="text" id="image-title" placeholder="Image title (optional)">
+          </label>
+          <button type="submit" class="upload-button">Upload Image</button>
+        </form>
+        <p class="upload-note">Uploaded images are stored locally in your browser. Refresh keeps them here, but they are not published to a server automatically.</p>
+        <p id="upload-message" class="upload-message"></p>
+      </div>
+    </section>
+
+    <section class="gallery-grid" id="gallery"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
